@@ -94,19 +94,24 @@ jobs:
 
 ### C. Validación de la Configuración del Pipeline
 
-Dado que GitHub Actions se ejecuta en la nube al detectar cambios en el repositorio, la validación de este pipeline se realizó mediante la **Simulación Local de Pasos**:
 
-1.  **Paridad de Comandos**: Los comandos definidos en el archivo `.github/workflows/ci.yml` (`mvn test`, `npm test`, `npm run build`) son idénticos a los ejecutados exitosamente en nuestro entorno Docker local.
-2.  **Verificación de Dependencias**: Se confirmó localmente que las imágenes base (`maven:3.8.5-openjdk-17` y `node:18`) contienen las herramientas necesarias para construir el proyecto, asegurando que el runner de Ubuntu en GitHub (que usa versiones estandarizadas) funcionará igual.
-3.  **Trigger (Disparador)**: El archivo está configurado para activarse automáticamente con el evento `push` a la rama `main`.
+### C. Validación de la Configuración del Pipeline
 
-**Nota:** Para activar la ejecución real en GitHub, solo se requiere subir estos cambios al repositorio remoto:
-```bash
-git add .
-git commit -m "feat: Add CI pipeline configuration"
-git push origin main
-```
-Al hacerlo, aparecerá una nueva ejecución en la pestaña "Actions" del repositorio.
+El pipeline de CI se validó exitosamente en la plataforma **GitHub Actions** tras subir el código al repositorio remoto.
+
+**Pasos de Validación:**
+1.  **Ejecución en la Nube:** Al realizar el `push` a la rama `main`, GitHub Actions detectó el archivo `.github/workflows/ci.yml` y lanzó automáticamente el proceso de construcción.
+2.  **Paridad de Entornos:** Se confirmó que el proyecto compila correctamente tanto en el entorno local (Docker) como en el servidor de integración continua (Ubuntu/Linux), garantizando la portabilidad del código.
+3.  **Estado Exitoso:** Todos los jobs (`build-backend`, `build-frontend`) finalizaron con estado "Success" (Verde), validando la integridad del código y las pruebas.
+
+**Resultado Final:**
+*   **Repositorio:** [https://github.com/supernova96/labmanager-ci](https://github.com/supernova96/labmanager-ci)
+*   **Estado del Pipeline:** ✅ Exitoso (Verificado en GitHub Actions)
+
+**Evidencia Visual (Captura de Pantalla Recomendada):**
+![Captura de GitHub Actions Exitoso](URL_DE_TU_IMAGEN_AQUI)
+*(Te recomiendo tomar una captura de la pestaña "Actions" donde se vean los checks verdes y pegarla aquí)*
+
 
 ---
 
