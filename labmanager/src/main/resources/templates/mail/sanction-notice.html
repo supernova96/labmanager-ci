@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Notificación de Sanción</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ef4444, #b91c1c);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 30px;
+            color: #374151;
+        }
+
+        .reason-box {
+            background-color: #fef2f2;
+            border: 1px solid #fca5a5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            color: #7f1d1d;
+        }
+
+        .footer {
+            background-color: #1f2937;
+            color: #9ca3af;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Aviso de Sanción</h1>
+        </div>
+        <div class="content">
+            <p>Estimado/a <strong th:text="${name}">Usuario</strong>,</p>
+            <p>Le informamos que se ha aplicado una sanción a su cuenta en el sistema de laboratorios.</p>
+
+            <div class="reason-box">
+                <h3>Motivo:</h3>
+                <p th:text="${reason}">Incumplimiento de normas</p>
+            </div>
+
+            <p>Mientras esta sanción esté activa, <strong>no podrá realizar nuevas reservas</strong> de equipos.</p>
+            <p>Si considera que esto es un error, por favor contacte al administrador del laboratorio inmediatamente.
+            </p>
+        </div>
+        <div class="footer">
+            &copy; 2026 University LabManager. Departamento de Sistemas.
+        </div>
+    </div>
+</body>
+
+</html>

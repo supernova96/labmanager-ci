@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recordatorio de Reserva</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 30px;
+            color: #374151;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #d97706;
+        }
+
+        .footer {
+            background-color: #1f2937;
+            color: #9ca3af;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Recordatorio de Reserva</h1>
+        </div>
+        <div class="content">
+            <p>Hola <span th:text="${name}">Usuario</span>,</p>
+            <p>Te recordamos que tienes una reserva próxima a iniciar.</p>
+
+            <p>Equipo: <strong th:text="${laptop}">Laptop</strong></p>
+            <p>Hora de inicio: <span class="highlight" th:text="${startTime}">14:00</span></p>
+
+            <p>Por favor, llega puntual al laboratorio para recoger tu equipo.</p>
+        </div>
+        <div class="footer">
+            &copy; 2026 University LabManager.
+        </div>
+    </div>
+</body>
+
+</html>

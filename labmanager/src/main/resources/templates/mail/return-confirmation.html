@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmación de Devolución</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Green header for success */
+        .content {
+            padding: 30px;
+            color: #374151;
+        }
+
+        .details {
+            background-color: #f9fafb;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #10b981;
+        }
+
+        .footer {
+            background-color: #1f2937;
+            color: #9ca3af;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>¡Devolución Exitosa!</h1>
+        </div>
+        <div class="content">
+            <p>Hola, <strong th:text="${name}">Usuario</strong>,</p>
+            <p>Confirmamos que has entregado el equipo correctamente. Gracias por cuidar nuestros recursos.</p>
+
+            <div class="details">
+                <p><strong>Equipo:</strong> <span th:text="${laptop}">Laptop HP</span></p>
+                <p><strong>Fecha de Devolución:</strong> <span th:text="${returnTime}">12/12/2023 14:00</span></p>
+                <p><strong>Estado:</strong> <span style="color: #10b981; font-weight: bold;">ENTREGADO</span></p>
+            </div>
+
+            <p>No tienes adeudos pendientes por esta reserva.</p>
+            <p><em>¡Esperamos verte pronto en el laboratorio!</em></p>
+        </div>
+        <div class="footer">
+            &copy; 2026 University LabManager.
+        </div>
+    </div>
+</body>
+
+</html>

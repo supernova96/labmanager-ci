@@ -1,0 +1,257 @@
+# Tareas de Desarrollo de LabManager
+
+- [x] Diseño de Arquitectura del Sistema y Diagrama ER <!-- id: 0 -->
+    - [x] Definir Estructura de Paquetes <!-- id: 1 -->
+    - [x] Definir Modelo Entidad-Relación <!-- id: 2 -->
+- [x] Implementar Entidades Principales (Diseño) <!-- id: 3 -->
+    - [x] Entidad Laptop <!-- id: 4 -->
+    - [x] Entidad Reserva <!-- id: 5 -->
+- [x] Borrador de Lógica de Negocio Crítica <!-- id: 6 -->
+    - [x] Servicio de Búsqueda de Disponibilidad <!-- id: 7 -->
+- [x] Inicializar Proyecto Spring Boot <!-- id: 8 -->
+    - [x] Crear Estructura del Proyecto y pom.xml <!-- id: 9 -->
+    - [x] Configurar application.properties <!-- id: 10 -->
+    - [x] Crear Clase Principal de la Aplicación <!-- id: 11 -->
+- [x] Implementar Capa de Dominio <!-- id: 12 -->
+    - [x] Enums y Entidades (Laptop, Usuario, Reserva, etc.) <!-- id: 13 -->
+    - [x] Repositorios <!-- id: 14 -->
+- [x] Implementar Módulo de Seguridad <!-- id: 15 -->
+    - [x] Clase de Utilidad JWT <!-- id: 16 -->
+    - [ ] [BUG-013] Fix mobile table overflow in Dashboards <!-- id: 13 -->
+    - [x] [BUG-014] Fix timezone mismatch in reservation hours <!-- id: 14 -->
+    - [x] Filtro de Token de Autenticación <!-- id: 18 -->
+    - [x] Configuración de Seguridad <!-- id: 19 -->
+    - [x] Controlador de Autenticación y DTOs <!-- id: 20 -->
+- [x] Implementar API de Reservas y Búsqueda <!-- id: 21 -->
+    - [x] Controlador de Laptops (Endpoint de Búsqueda) <!-- id: 22 -->
+    - [x] Controlador de Reservas (Endpoint de Creación) <!-- id: 23 -->
+    - [x] DTOs de Solicitud y Respuesta <!-- id: 24 -->
+- [x] Implementar Programador y Mantenimiento <!-- id: 25 -->
+    - [x] Actualizar Entidad de Usuario (Sanciones) <!-- id: 26 -->
+    - [x] Programador de Reservas Vencidas <!-- id: 27 -->
+- [x] Revisión Final y Recorrido <!-- id: 28 -->
+- [x] Implementar Frontend (React + Vite) <!-- id: 29 -->
+    - [x] Inicializar Proyecto y Tailwind CSS <!-- id: 30 -->
+- [x] Implementar Frontend (React + Vite) <!-- id: 29 -->
+    - [x] Inicializar Proyecto y Tailwind CSS <!-- id: 30 -->
+    - [x] Configurar Axios y Rutas <!-- id: 31 -->
+- [x] Implementar Frontend (React + Vite) <!-- id: 29 -->
+    - [x] Inicializar Proyecto y Tailwind CSS <!-- id: 30 -->
+    - [x] Configurar Axios y Rutas <!-- id: 31 -->
+    - [x] Páginas de Autenticación (Login/Registro) <!-- id: 32 -->
+    - [x] Dashboard de Estudiante (Buscar y Reservar) <!-- id: 33 -->
+    - [x] Dashboard de Admin (Gestionar Inventario) <!-- id: 34 -->
+    - [x] Dashboard de Admin: "Vista de Incidentes" y "Lista de Reservas" (Entregas).
+- [x] Gestión de Inventario: Conectar a API real.
+
+## Fase 4: Características Avanzadas (Aprobaciones y Gestión)
+- [ ] **Backend**: Actualizar Modelo de Reserva (Materia, Profesor, Enum de Estado).
+- [x] Backend: Implementar Rol de Profesor y Reservas Masivas
+    - [x] Agregar `PROFESSOR` a `Role.java`
+    - [x] Agregar `batchId` a `Reservation.java`
+    - [x] Actualizar `ReservationRequest` con `quantity`
+    - [x] Implementar `createBulkReservation` en `ReservationService`
+    - [x] Actualizar `ReservationController`
+- [x] Frontend: Implementar Dashboard de Profesor y Rutas
+    - [x] Crear `ProfessorDashboard.tsx`
+    - [x] Agregar ruta a `App.tsx`
+    - [x] Actualizar lógica de `Login.tsx`
+- [x] Backend: Actualizar `AdminUserController` para soportar selección de Rol
+- [x] Frontend: Agregar Lista Desplegable de Roles al Modal de Registro de Usuario en Admin
+- [x] Backend: Configurar Manejador de Recursos Estáticos
+- [x] Frontend: Agregar entrada de archivo al modal de Reserva/Incidente
+- [x] Frontend: Mostrar imagen en Dashboard de Admin
+
+## Restricciones de Reserva y Fechas Bloqueadas
+- [x] Backend: Crear Entidad y Repositorio `BlockedDate`
+- [x] Backend: Crear `BlockedDateController`
+- [x] Backend: Actualizar `ReservationService` con lógica de validación
+- [x] Frontend: Agregar gestión de Fechas Bloqueadas al Dashboard de Admin
+- [x] Frontend: Aplicar restricciones en Dashboard de Estudiante/Profesor
+
+## 7. Retroalimentación y Calificación de Equipos
+- [x] Backend: Actualizar entidad `Reservation` (calificación, comentarios)
+- [x] Backend: Implementar `submitFeedback` en Servicio y Controlador
+- [x] Backend: Implementar lógica de Activación de Mantenimiento
+- [x] Agregar `overflow-x-auto` a tablas en AdminDashboard
+- [x] Agregar `overflow-x-auto` a tablas en ProfessorDashboard
+- [x] Agregar `overflow-x-auto` a tablas en StudentDashboard
+- [x] Frontend: Agregar Modal de Calificación al Dashboard de Estudiante
+- [x] Frontend: Agregar Modal de Calificación al Dashboard de Profesor
+- [x] Frontend: Agregar Vista de Admin para Calificaciones/Retroalimentación
+- [x] Backend: Agregar endpoints CRUD de Laptop
+- [x] Frontend: Implementar CRUD de Laptop en Dashboard de Admin
+- [x] Traducción: Traducir Dashboard de Admin al Español
+- [x] Traducción: Traducir Dashboard de Estudiante al Español
+- [x] Traducción: Traducir Dashboard de Profesor al Español
+- [x] Traducción: Traducir Login/Registro al Español
+- [ ] Verificación
+    - [ ] Verificar Agregar/Editar/Eliminar Laptop
+- [x] **Backend**: Gestión de Usuarios Admin (Registrar Usuario, Penalizar Usuario).
+- [x] **Frontend**: Actualizar Formulario de Reserva de Estudiante (Agregar Clase/Prof).
+- [x] **Frontend**: Vista de "Aprobaciones" de Admin y Pestaña de Gestión de Usuarios.
+- [ ] **Pruebas**: Verificar flujo completo (Solicitud -> Aprobación Admin -> Entrega -> Devolución).
+- [ ] Mejorar Dashboards y Características <!-- id: 35 -->
+    - [x] Backend: Controlador de Incidentes y Reservas Admin <!-- id: 36 -->
+    - [x] Frontend: Reporte de Incidentes de Estudiante <!-- id: 37 -->
+    - [x] Frontend: Reservas Admin (Vista de Entrega) <!-- id: 38 -->
+    - [x] Frontend: Conectar Datos de Inventario Real <!-- id: 39 -->
+    - [x] Característica: Búsqueda de Software Multi-selección <!-- id: 40 -->
+    - [x] Característica: Visualización "En Uso Por" en Inventario Admin <!-- id: 41 -->
+    - [x] Característica: Vincular Incidentes al Inventario <!-- id: 42 -->
+
+- [ ] **Fase 6: Expansión Empresarial** <!-- id: 43 -->
+    - [x] Backend: API de Analíticas (Uso, Incidentes, Software) <!-- id: 44 -->
+    - [x] Frontend: Dashboard de Analíticas Admin (Gráficos) <!-- id: 45 -->
+    - [x] Mejorar Plantillas de Correo
+    - [x] Actualizar copyright a 2026
+    - [x] Crear plantillas HTML para confirmación de devolución y restablecimiento de contraseña
+    - [x] Implementar generación de código QR para reservas
+    - [x] Verificar actualizaciones de estado de UI de Sanciones
+- [x] Depurar Desajuste de Estado en Dashboard de Profesor
+    - [x] Inspeccionar renderizado de estado en ProfessorDashboard.tsx
+    - [x] Verificar consistencia de enum ReservationStatus
+- [x] Depurar Error de Creación de Laptop (Corregido)
+    - [x] Verificar LaptopController.java
+    - [x] Verificar restricciones en Laptop.java
+    - [x] Inspeccionar payload de AdminDashboard.tsx <!-- id: 47 -->
+    - [x] Backend: Lógica de Ciclo de Mantenimiento <!-- id: 48 -->
+    - [/] Estabilidad: Corregir Caída de Backend y Datos de Analíticas <!-- id: 49 -->
+    - [x] Experiencia de Usuario: Implementar Advertencia de Sanción y Restricciones <!-- id: 50 -->
+- [x] Experiencia de Usuario: Implementar Advertencia de Sanción y Restricciones <!-- id: 50 -->
+- [x] Experiencia de Usuario: Resolución de Incidentes Admin y Filtrado de Inventario <!-- id: 51 -->
+- [x] Experiencia de Usuario: Separar Incidentes Activos vs Históricos en Analíticas <!-- id: 52 -->
+    - [x] Backend: Separar Incidentes por Severidad en Activos/Resueltos
+    - [x] Frontend: Mostrar Gráficos Lado a Lado o Apilados para Estado de Incidentes
+
+- [x] Experiencia de Usuario: Traducir Enums de Estado al Español <!-- id: 53 -->
+- [x] Característica: Reportes Avanzados (Filtros y Traducciones) <!-- id: 55 -->
+- [x] Característica: Selección de Usuario en Reporte (Búsqueda por Nombre/Matrícula) <!-- id: 56 -->
+- [x] Característica: Gestión de Sesión (Auto-Logout y Tiempo de Espera) <!-- id: 57 -->
+    - [x] Backend: Configurar expiración de lista sensata <!-- id: 58 -->
+    - [x] Frontend: Manejar 401 No Autorizado (Auto-Logout) <!-- id: 59 -->
+    - [x] Frontend: Implementar Temporizador de Inactividad (30min) <!-- id: 60 -->
+- [x] Característica: Registro Seguro (Validación de Entrada) <!-- id: 61 -->
+    - [x] Backend: Agregar Restricciones de Validación DTO <!-- id: 62 -->
+    - [x] Frontend: Agregar Validación de Formulario (Regex/Longitud) <!-- id: 63 -->
+- [x] Traducción: Traducir Login y Registro al Español <!-- id: 64 -->
+- [x] Característica: Renovación de UI Moderna (Glassmorphism) <!-- id: 65 -->
+    - [x] Global: Fondo Degradado CSS Premium <!-- id: 66 -->
+    - [x] Componentes: Aplicar Glassmorphism (Desenfoque/Transparencia) <!-- id: 67 -->
+    - [x] Componentes: Modernizar Inputs y Botones <!-- id: 68 -->
+    - [x] Dashboard de Estudiante: Aplicar Estilos Glassmorphism
+    - [x] Dashboard de Profesor: Aplicar Estilos Glassmorphism
+- [x] Limpieza y Linting
+    - [x] Eliminar importaciones no utilizadas en `ReportService.java`
+    - [x] Corregir advertencia de seguridad nula en `ReportController.java`
+    - [x] Corregir importaciones no utilizadas en `AnalyticsDashboard.tsx`
+- [x] Localización y Realismo
+    - [x] Base de Datos: Traducir datos semilla al español (Usuarios, Incidentes, etc.)
+    - [x] Base de Datos: Usar nombres españoles realistas para usuarios
+- [x] Refinamientos de UI
+    - [x] Dashboard de Admin: Agregar opción 'Inactivo' al Filtro de Estado de Inventario
+    - [x] Dashboard de Admin: Mostrar descripción del incidente en tarjetas de Inventario al filtrar por incidentes
+    - [x] Dashboard de Admin: Traducir severidad de incidente (CRÍTICO, MEDIO, BAJO) al Español
+- [x] Característica: Reporte de Equipo de Escritorio Fijo
+    - [x] Backend: Actualizar Entidad de Incidente (Tipo, Ubicación, Laptop Opcional)
+    - [x] Frontend: Agregar pestaña 'Reportar Falla' al Dashboard de Profesor
+    - [x] Frontend: Formulario de Incidente para Escritorio/PC Fijo
+    - [x] Frontend: Mostrar Ubicación en Vista de Incidentes de Admin
+    - [x] Frontend: Permitir a Profesores seleccionar sus laptops activas para reportar
+- [x] Característica: Mejoras en Analíticas y Reportes
+    - [x] Backend: Agregar incidentsByType a Analytics DTO y Servicio
+    - [x] Frontend: Agregar Gráfico 'Incidentes por Tipo' al Dashboard de Analíticas
+    - [x] Backend: Implementar Generación de Reporte de Incidentes (PDF/Excel)
+    - [x] Frontend: Agregar Botones de Exportación para Reportes de Incidentes
+
+- [x] Depuración y Estabilización
+    - [x] Corregir errores de compilación en ReportService (sintaxis, campos faltantes)
+    - [x] Corregir errores de compilación en AnalyticsDashboardDTO (utilizationRate faltante)
+    - [x] Corregir error de importación de frontend (icono Descarga) en AdminDashboard
+
+- [x] Característica: Integración de Calendario (ICS)
+    - [x] Frontend: Generar archivo ICS para Reservas de Estudiante
+    - [x] Frontend: Generar archivo ICS para Reservas de Profesor
+    - [x] Característica: PWA y Soporte Offline
+        - [x] Instalar vite-plugin-pwa
+        - [x] Configurar Manifiesto y Service Worker
+        - [x] Configurar Manifiesto y Service Worker
+        - [x] Implementar Cola de Solicitudes Offline y Sincronización
+    - [x] Característica: Dockerización
+        - [x] Dockerfile de Backend (Multi-etapa)
+        - [x] Dockerfile de Frontend (Nginx)
+        - [x] docker-compose.yml
+        - [x] README_DOCKER.md
+
+- ## Fase 9: Depuración y Estabilización (COMPLETADO)
+- [x] Corregir error "Tabla no encontrada" durante el inicio
+  - [x] Implementar `DataInitializer` robusto para manejar carga de esquema/datos manualmente.
+  - [x] Corregir desajuste de hash de contraseña de Admin.
+- [x] Corregir Fallo en Envío de Correos
+  - [x] Inyectar `EmailService` en `ReservationService`.
+  - [x] Corregir errores de ejecución (`getUsername`/`getBrand` -> `getMatricula`/`getModel`) en `EmailService`.
+  - [x] Corregir error Hibernate/Async `Illegal pop` usando objetos desconectados.
+  - [x] Implementar correo de "Confirmación de Devolución".
+  - [x] Corregir error de destinatario de correo "Vencido".
+
+## Fase 10: Olvido de Contraseña (COMPLETADO)
+- [x] Implementación Backend
+  - [x] Actualizar entidad `User` (campos de token).
+  - [x] Actualizar `UserRepository` (findByToken).
+  - [x] Actualizar `EmailService` (enviar enlace).
+  - [x] Actualizar `AuthController` (endpoints forgot/reset).
+- [x] Implementación Frontend
+  - [x] Crear página `ForgotPassword`.
+  - [x] Crear página `ResetPassword`.
+  - [x] Agregar enlace a página de Login.
+  - [x] Registrar rutas (`/forgot-password`, `/reset-password`).
+- [x] Aseguramiento de Calidad (QA)
+    - [x] Prueba de Flujo Extremo a Extremo Automatizada (Reserva Profesor -> Aprobar Admin -> Reportar -> Devolver)
+
+- [/] **Fase 7: Notificaciones por Correo** <!-- id: 70 -->
+    - [x] **Dependencias**: Agregar Spring Mail, Thymeleaf, ZXing (QR) <!-- id: 71 -->
+    - [x] **Infraestructura**: Crear `EmailService` y Plantillas HTML <!-- id: 72 -->
+        - [x] Conexión/Configuración (SMTP)
+        - [x] Plantilla: Confirmación de Reserva (con QR)
+        - [x] Plantilla: Recordatorio de Reserva
+        - [x] Plantilla: Notificación de Sanción
+    - [x] **Actualizaciones del Modelo de Datos** <!-- id: 74 -->
+        - [x] Backend: Agregar `email` a Entidad `User` <!-- id: 75 -->
+        - [x] Backend: Actualizar DTO `SignupRequest` y `AuthController` <!-- id: 76 -->
+        - [x] Frontend: Agregar Campo Email a `Register.tsx` <!-- id: 77 -->
+        - [x] Backend: Actualizar `EmailService` para usar correo real <!-- id: 78 -->
+    - [x] **Puntos de Integración** <!-- id: 73 -->
+        - [x] Enviar en Éxito de Reserva (Estudiante/Profesor)
+        - [x] Enviar en Sanción Aplicada
+        - [x] Enviar Recordatorio (Tarea Programada - ¿1 hora antes?)
+
+- [x] **Fase 8: Gestión de Lista Blanca** <!-- id: 79 -->
+    - [x] **Backend**: Crear `WhitelistController` (Agregar/Listar/Eliminar) <!-- id: 80 -->
+    - [x] **Frontend**: Agregar pestaña "Lista Blanca" a `AdminDashboard` <!-- id: 81 -->
+    - [x] **Integración**: Conectar Frontend a API Backend <!-- id: 82 -->
+    - [x] **Verificación**: Agregado `email` a entidad `User` y conectado exitosamente `EmailService`.
+
+## Fase 11: Mejoras del Sistema (EN PROGRESO)
+- [ ] **Característica**: Subida de Evidencia de Incidente <!-- id: 83 -->
+    - [x] Backend: Actualizar Entidad Incidente (evidencePath) <!-- id: 84 -->
+    - [x] Backend: Configurar Manejador de Recursos Estáticos <!-- id: 85 -->
+    - [x] Backend: Actualizar Controlador para Subida de Archivos <!-- id: 86 -->
+    - [x] Frontend: Agregar Entrada de Archivo (Estudiante/Profesor) <!-- id: 87 -->
+    - [x] Frontend: Ver Imagen (Admin) <!-- id: 88 -->
+    - [x] Depuración: Corregir Error de Subida de Incidente (Tamaño Máx de Archivo)
+    - [x] Característica: Escáner QR para Admin <!-- id: 90 -->
+        - [x] Frontend: Instalar dependencias QR <!-- id: 91 -->
+        - [x] StudentDashboard: Agregar botón 'Mostrar QR' <!-- id: 92 -->
+        - [x] AdminDashboard: Agregar Escáner y Lógica de Entrega <!-- id: 93 -->
+        - [x] **Corrección de Bug**: Corregida caída de Inventario Admin por datos de usuario nulos/faltantes.
+
+## Nueva Fase: Monitoreo del Sistema y Logs (COMPLETADO)
+- [x] **Backend**: Implementar Sistema de Logs del Sistema
+    - [x] Entidad `SystemLog` y Repositorio.
+    - [x] `LogService` con `@Transactional`.
+    - [x] `LoggingAspect` para captura automática de POST/PUT/DELETE y Excepciones.
+    - [x] `LogController` (GET /api/logs).
+- [x] **Frontend**: Visualización de Logs en Admin
+    - [x] Creado componente `LogsTable` con búsqueda y filtros.
+    - [x] Integrado en `AdminDashboard.tsx`.
+    - [x] Corregidos problemas de integración JSX.

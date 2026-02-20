@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./labmanager
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    container_name: labmanager-backend
+    # environment:
+    #   - SPRING_PROFILES_ACTIVE=prod
+    networks:
+      - lab-network
+
+  frontend:
+    build:
+      context: ./labmanager-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    container_name: labmanager-frontend
+    depends_on:
+      - backend
+    networks:
+      - lab-network
+
+networks:
+  lab-network:
+    driver: bridge
